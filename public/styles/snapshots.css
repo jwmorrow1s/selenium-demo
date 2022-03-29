@@ -1,0 +1,16 @@
+.test-result-snapshots-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* .test-result-snapshot-child {
+
+}
+
+.test-result-snapshot-child-image {
+
+} */

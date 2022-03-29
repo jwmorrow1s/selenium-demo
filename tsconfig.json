@@ -1,0 +1,16 @@
+{
+    "include": ["src"],
+    "exclude": ["node_modules", "src/tests", "public", "web"],
+    "lib": ["es5", "es6", "es2015"],
+    "compileOnSave": false,
+    "compilerOptions": {
+        "noEmit": false,
+        "sourceMap": true,
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": false,
+        "target": "es6",
+        "outDir": "./out"
+    }
+}
