@@ -1,6 +1,95 @@
 @import './styles/snapshots.css';
 
+:root {
+    --base-unit: 40px;
+    --unitdiv2: calc(var(--base-unit) / 2);
+    --unitdiv4: calc(var(--base-unit) / 4);
+    --unitdiv6: calc(var(--base-unit) / 6);
+    --unitdiv8: calc(var(--base-unit) / 8);
+    --unitdiv10: calc(var(--base-unit) / 10);
+    --unitmult2: calc(var(--base-unit) * 2);
+    --unitmult4: calc(var(--base-unit) * 4);
+    --unitmult6: calc(var(--base-unit) * 6);
+    --unitmult8: calc(var(--base-unit) * 8);
+    --unitmult10: calc(var(--base-unit) * 10);
+    --bg-primary-h: 0;
+    --bg-primary-s: 0%;
+    --bg-primary-l: 83%;
+    --primary-bg: hsla(var(--bg-primary-h), var(--bg-primary-s), var(--bg-primary-l), 1); /*lightgray*/
+    --primary-bg-dark: hsla(var(--bg-primary-h), var(--bg-primary-s), calc(var(--bg-primary-l) - 12.5%), 1);
+    --primary-bg-darker: hsla(var(--bg-primary-h), var(--bg-primary-s), calc(var(--bg-primary-l) - 25%), 1);
+    --primary-bg-light: hsla(var(--bg-primary-h), var(--bg-primary-s), calc(var(--bg-primary-l) + 12.5%), 1);
+    --primary-bg-lighter: hsla(var(--bg-primary-h), var(--bg-primary-s), calc(var(--bg-primary-l) + 25%), 1);
+    --text-primary-h: 0;
+    --text-primary-s: 0%;
+    --text-primary-l: 96%;
+    --text-primary-dark: hsla(var(--text-primary-h), var(--text-primary-s), calc(var(--text-primary-l) - 12.5%), 1);
+    --text-primary-darker: hsla(var(--text-primary-h), var(--text-primary-s), calc(var(--text-primary-l) - 25%), 1);
+    --text-primary-light: hsla(var(--text-primary-h), var(--text-primary-s), calc(var(--text-primary-l) + 12.5%), 1);
+    --text-primary-lighter: hsla(var(--text-primary-h), var(--text-primary-s), calc(var(--text-primary-l) + 25%), 1);
+    --primary-text: hsla(var(--text-primary-h), var(--text-primary-s), var(--text-primary-l), 1);  /*whitesmoke*/
+    --bg-secondary-h: 182;
+    --bg-secondary-s: 25%;
+    --bg-secondary-l: 50%;
+    --secondary-bg-dark: hsla(var(--bg-secondary-h), var(--bg-secondary-s), calc(var(--bg-secondary-l) + 12.5%), 1);
+    --secondary-bg-darker: hsla(var(--bg-secondary-h), var(--bg-secondary-s), calc(var(--bg-secondary-l) + 25%), 1);
+    --secondary-bg-light: hsla(var(--bg-secondary-h), var(--bg-secondary-s), calc(var(--bg-secondary-l) - 12.5%), 1);
+    --secondary-bg-lighter: hsla(var(--bg-secondary-h), var(--bg-secondary-s), calc(var(--bg-secondary-l) - 25%), 1);
+    --secondary-bg: hsla(var(--bg-secondary-h), var(--bg-secondary-s), var(--bg-secondary-l), 1); /*cadetblue*/
+    --text-secondary-h: 182;
+    --text-secondary-s: 25%;
+    --text-secondary-l: 50%;
+    --secondary-text: hsla(var(--text-secondary-h), var(--text-secondary-s), var(--text-secondary-l), 1); /*cadetblue*/
+    --primary-drop-shadow: 4px 2px 2px var(--primary-bg-darker);
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+button:focus {
+    outline: none;
+}
+
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--primary-bg);
+}
+
+h1 {
+    color: var(--secondary-text);
+    text-shadow: 0 0 2px var(--primary-text);
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--unitmult2) auto;
+}
+
+.primary-btn {
+    height: var(--base-unit);
+    padding: var(--unitdiv10) var(--unitdiv4);
+    border-radius: var(--unitdiv8);
+    background-color: var(--secondary-bg);
+    color: var(--primary-text);
+    box-shadow: none;
+}
+
+.primary-btn:hover {
+    color: var(--secondary-bg);
+    background-color: var(--primary-text);
+}
+
+/* #test-show-snapshots-btn {} */
+
+#selenium-snapshots {
+    width: 50%;
+    height: 30%;
 }

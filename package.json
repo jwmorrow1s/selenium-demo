@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf node_modules ./out/* && npm i",
     "build:server": "./node_modules/typescript/bin/tsc -p ./tsconfig.json",
-    "build:web": "./node_modules/.bin/esbuild ./web/root/index.ts --bundle --outfile=./public/index.js",
+    "build:web": "./node_modules/.bin/esbuild ./web/root/index.ts --minify --bundle --outfile=./public/index.js",
     "execute": "[ -f ./out/index.js ] && env NODE_PATH=. node ./out/index.js",
     "start": "npm run build:server && npm run build:web && npm run execute",
     "poststart": "rm -rf ./out",

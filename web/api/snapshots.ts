@@ -1,4 +1,6 @@
-export const getSnapshotFilePaths: () => Promise<string[]> = async () => {
+import { ImageRef } from "../../src/lib/types/ui";
+
+export const getSnapshotFilePaths: () => Promise<ImageRef[]> = async () => {
     try {
         const result: Response = await fetch('test/results/snapshots');
         const json: string = await result.json();
